@@ -1,4 +1,4 @@
-/*body {
+body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,18 +10,4 @@
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}*/
-.header {
-  color:none  ;
-  font-family: verdana;
-  padding: 10px;
-  justify-content: center;
-  align-items: center;
- }
-
-.header2 {
-  font-style: italic;
-  color: blue;
-  text-transform: uppercase;
-  background-color: lightblue; 
 }
