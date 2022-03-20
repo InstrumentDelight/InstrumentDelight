@@ -1,5 +1,8 @@
 import React from 'react';
+import {Form,Col,Row,Container,Button} from 'react-bootstrap';
 import {Link} from "react-router-dom";
+import uiImage from './image/signin.png';
+
 class Signin extends React.Component
 {
     constructor(){
@@ -10,14 +13,14 @@ class Signin extends React.Component
     }
     uservalue =(event)=>
     {
-        let n=event.targert.name;
+        let n=event.target.name;
         let v=event.target.value;
         let err="";
         if(n==="pno")
         {
             if(v!=="" && !Number(v))
             {
-                err=<strong>Invalid value,Enter the number</strong>
+                err=<strong style={{color:"orange"}}>Invalid value,Enter the number</strong>
             }
         }
         this.setState({errmsg:err});
@@ -25,42 +28,58 @@ class Signin extends React.Component
     }
     render()
     {
-        return(
-            <form class="was-validated container container-sm border">
-                <div class="form-group">
-                    <h1 style={{textAlign:"center",color:"orange"}}>SIGN UP</h1>
-                    <label for ="uname" >UserName : </label>
-                    <input type="text" class="form-control" id="uname" onChange={this.uservalue} placeholder="Enter name" name="username" required/>
-                </div>
-                <div class="form-group">
-                    <label for ="email">Email : </label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter Email" name="Email" required/>
-                </div>
-                <div class="form-group">
-                    <label for="uname">phone number : </label>
-                    <input type="text" class="form-control" id="pno" onChange={this.uservalue} placeholder="Enter Phone number" name="pno" required/>{this.state.errmsg}
-                </div>
-                 <div class="form-group">
-                     <label for="pwd">password : </label>
-                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" required/>
-                 </div>
-                 <div class="form-group">
-                    <label for="pwd">confirm Password : </label>
-                    <input type="password" class="form-control" id="pwd"  placeholder="confirm password" name='pwd' required/>
-                </div>
-                 <div class="form-group form-check">
-                    <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" name="remember" required/> I agree all the Terms and Condition.
-                    </label>
-                 </div>
-                 <button type="submit" class="btn btn-primary">SIGN UP</button>
-                    <p className="text-center">
-                    <Link to="/Login" >
-               <h5> Already have an Account</h5>
-            </Link>
-            </p>
-            </form>
-        )
-    }
-}
+    return (
+        <div>
+                <>
+                <h1 className="mt-3" style={{color:"orange"}}>SIGN UP </h1>
+                    <Container className="mt-5">
+                        <Row>
+                            <Col lg={4} md={6} sm={12}>
+
+                            <Form>
+                <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Control type="email" placeholder="Enter Email" />
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicText">
+                <Form.Control type="text" placeholder="Enter UserName" />
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicText">
+                <Form.Control type="text" onChange={this.uservalue}   placeholder="Enter Mobile Number" name="pno"/>{this.state.errmsg}
+                </Form.Group>
+        
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Control type="password" placeholder="Password" />
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Control type="password" placeholder="Confirm Password" />
+                </Form.Group>
+
+                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                  <Form.Check type="checkbox" label="I Agree All The Terms And Condition" />
+                 </Form.Group>
+
+                <Button variant="primary btn-block" type="submit">SIGNUP</Button>
+                
+                <p className="text-center">
+                    <br/>
+                    <Link to="login">
+                    <h6 className='font'> Already have an Account ? click here</h6>
+               </Link>
+               </p>
+                </Form>
+                </Col>
+                     <Col lg={7} md={6} sm={6}>
+                     <img className=" w-100" src={uiImage} alt=""/>
+                     </Col>
+                </Row>
+                    </Container>
+                </>
+        </div>
+    )
+    };
+};
+
 export default Signin;

@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Signin from './Signin.js';
-import Login from './Login.js';
+import Login from './Login';
+import Signin from './Signin';
 import {BrowserRouter} from 'react-router-dom';
 
 ReactDOM.render(
