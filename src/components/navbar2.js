@@ -19,20 +19,20 @@ class App extends Component{
     <Navbar.Toggle aria-controls="basic-navbar-nav" />  
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
-      <MdProductionQuantityLimits/>
+      <MdProductionQuantityLimits size={35}/>
         <Nav.Link as={Link} to="/">products</Nav.Link>&nbsp;&nbsp;
         <img src="https://img.icons8.com/ios-filled/50/000000/edit-online-order.png" width={30} height={30}/>
         <Nav.Link as={Link} to={"/"}>Orders</Nav.Link>&nbsp;&nbsp;
-      </Nav>
-    </Navbar.Collapse>
-    <Nav >
+        <div style={{marginLeft:'830px'}}></div>
     <BiLogOut size={35}/>
       <Nav.Link as={Link} to="/">Logout</Nav.Link>
-    </Nav>
+      </Nav>
+    </Navbar.Collapse>
+   
     </Container >
     </Navbar>
     );
   }
 }
 export default App;
-//added
+//added chumma

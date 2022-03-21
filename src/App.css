@@ -1,0 +1,21 @@
+.margin{
+    margin: 0px 150px 70px 50px;
+}
+.img{
+    width: 400px;
+    
+}
+@media only screen and (max-width: 992px){
+    .margin{
+        padding: 0px;
+    }
+    .img{
+        width: 200px;
+
+    }
+    .responsive {
+        width: 70%;
+        height: auto;
+        margin-left: 50px;
+      }
+}
