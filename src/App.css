@@ -2,7 +2,7 @@
     margin: 0px 150px 70px 50px;
 }
 .img{
-    width: 400px;
+    width: 500px;
     
 }
 @media only screen and (max-width: 992px){
@@ -11,7 +11,7 @@
     }
     .img{
         width: 200px;
-
+        padding-left: -100px;
     }
     .responsive {
         width: 70%;

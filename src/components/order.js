@@ -1,6 +1,7 @@
 import React from "react";
 import _n from './navbar2';
 import '../App.css';
+import Vo from'../view_order.png';
 import { Box } from "@material-ui/core";
 import {Form,Button, Container} from 'react-bootstrap';
 function order(){ 
@@ -8,7 +9,7 @@ return <div>
 <_n></_n>
 <div class="row" style={{marginTop:"50px",marginLeft: "100px"}}>
 <div class="col-lg-6">
-<img src="https://media.istockphoto.com/vectors/online-shopping-cart-add-items-ecommerce-website-or-mobile-app-icon-vector-id1221159137?k=20&m=1221159137&s=170667a&w=0&h=V0cZnfJFftykuZvSEt3vZuR3NRkTpjZ0zuVJiij9BlQ=" class="img responsive"/></div>
+<img src={Vo} class="img responsive"/></div>
 <div class="col-lg-6">
   <div class="margin">
 <Box color="#fffffa" bgcolor="#ffcc00" p={2}><div style={{textAlign:"center"}}>ADD A PRODUCT</div></Box>
@@ -40,4 +41,3 @@ return <div>
 }
 export default order
 
-//chumma doing smtg ntg doing
