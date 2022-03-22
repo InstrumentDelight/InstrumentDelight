@@ -7,10 +7,11 @@ import {Form,Button, Container} from 'react-bootstrap';
 function order(){ 
 return <div>
 <_n></_n>
+<Container>
 <div class="row" style={{marginTop:"50px",marginLeft: "100px"}}>
-<div class="col-lg-6">
+<div class="col-md-6">
 <img src={Vo} class="img responsive"/></div>
-<div class="col-lg-6">
+<div class="col-md-6">
   <div class="margin">
 <Box color="#fffffa" bgcolor="#ffcc00" p={2}><div style={{textAlign:"center"}}>ADD A PRODUCT</div></Box>
 <div style={{marginTop:"20px"}}><Form id="addinstrumentBody">
@@ -37,6 +38,7 @@ return <div>
 </div>
 </div>
 </div>
+</Container>
 </div>
 }
 export default order
